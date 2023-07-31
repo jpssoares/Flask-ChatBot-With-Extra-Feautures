@@ -1,4 +1,4 @@
-# ChatBot
+# Flask ChatBot With Quick Replies
 ## Introduction
 This project is based on the code from [BinaryHood](https://github.com/binary-hood/ChatBot-Starter). I have added the option for the chatbot to send a quick reply button, which the user can click instead of typing a response.
 
