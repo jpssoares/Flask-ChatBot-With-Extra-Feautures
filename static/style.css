@@ -2,7 +2,7 @@ body,html{
 	height: 100%;
 	margin: 0;
 	background: rgb(44, 47, 59);
-   background: -webkit-linear-gradient(to right, rgb(40, 59, 34), rgb(54, 60, 70), rgb(32, 32, 43));
+   	background: -webkit-linear-gradient(to right, rgb(40, 59, 34), rgb(54, 60, 70), rgb(32, 32, 43));
 	background: linear-gradient(to right, rgb(38, 51, 61), rgb(50, 55, 65), rgb(33, 33, 78));
 }
 
@@ -11,14 +11,9 @@ body,html{
 	margin-bottom: auto;
 }
 .card{
-	height: 500px;
+	height: 700px;
 	border-radius: 15px !important;
 	background-color: rgba(0,0,0,0.4) !important;
-}
-.contacts_body{
-	padding:  0.75rem 0 !important;
-	overflow-y: auto;
-	white-space: nowrap;
 }
 .msg_card_body{
 	overflow-y: auto;
@@ -28,21 +23,11 @@ body,html{
 	border-bottom: 0 !important;
 }
 .card-footer{
-border-radius: 0 0 15px 15px !important;
+	border-radius: 0 0 15px 15px !important;
 	border-top: 0 !important;
 }
 .container{
 	align-content: center;
-}
-.search{
-	border-radius: 15px 0 0 15px !important;
-	background-color: rgba(0,0,0,0.3) !important;
-	border:0 !important;
-	color:white !important;
-}
-.search:focus{
-	 box-shadow:none !important;
-   outline:0px !important;
 }
 .type_msg{
 	background-color: rgba(0,0,0,0.3) !important;
@@ -51,9 +36,9 @@ border-radius: 0 0 15px 15px !important;
 	height: 60px !important;
 	overflow-y: auto;
 }
-	.type_msg:focus{
-	 box-shadow:none !important;
-   outline:0px !important;
+.type_msg:focus{
+	box-shadow:none !important;
+   	outline:0px !important;
 }
 .attach_btn{
 	border-radius: 15px 0 0 15px !important;
@@ -69,22 +54,17 @@ border-radius: 0 0 15px 15px !important;
 	color: white !important;
 	cursor: pointer;
 }
-.search_btn{
-	border-radius: 0 15px 15px 0 !important;
-	background-color: rgba(0,0,0,0.3) !important;
+.toggle_btn{
+	border-radius: 10px 10px 10px 10px;
+	background-color: rgba(104, 104, 104, 0.578) !important;
 	border:0 !important;
 	color: white !important;
 	cursor: pointer;
+	float: right;
+	margin-top: 50px;
+	margin-right: 50px;
 }
-.contacts{
-	list-style: none;
-	padding: 0;
-}
-.contacts li{
-	width: 100% !important;
-	padding: 5px 10px;
-	margin-bottom: 15px !important;
-}
+
 .active{
 	background-color: rgba(0,0,0,0.3);
 }
@@ -180,44 +160,89 @@ border-radius: 0 0 15px 15px !important;
 .msg_head{
 	position: relative;
 }
-#action_menu_btn{
-	position: absolute;
-	right: 10px;
-	top: 10px;
-	color: white;
+
+#countdownTimer {
+    color: rgb(197, 35, 246);
+    text-align: center; 
+    font-weight: bold;
+}
+#remainingTime {
+    color: rgb(21, 88, 10);
+    text-align: right; 
+    font-weight: bold;
+}
+.dark-mode {
+	.card{
+		height: 700px;
+		border-radius: 15px !important;
+		background-color: rgba(0,0,0,0.4) !important;
+	}
+}
+
+.light-mode {
+	.card{
+		height: 700px;
+		border-radius: 15px !important;
+		background-color: rgba(255, 255, 255, 0.4) !important;
+	}
+	.send_btn{
+		border-radius: 0 15px 15px 0 !important;
+		background-color: rgba(255, 255, 255, 0.4) !important;
+		color: white !important;
+	}
+	.toggle_btn{
+		background-color: rgba(255, 255, 255, 0.4) !important;
+		color: black !important;
+	}
+	.type_msg{
+		background-color: rgba(255, 255, 255, 0.4) !important;
+		color:rgb(0, 0, 0) !important;
+	}
+	.user_info span{
+		font-size: 20px;
+		color: black;
+	}
+	.user_info p{
+		color: black;
+	}
+}
+.msg_cotainer {
+	display: flex;
+	flex-wrap: wrap;
+}
+  
+.quick_reply_btn {
+	margin-right: 10px;
+	margin-bottom: 10px;
+	padding: 8px 15px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 20px;
 	cursor: pointer;
-	font-size: 20px;
 }
-.action_menu{
-	z-index: 1;
-	position: absolute;
-	padding: 15px 0;
-	background-color: rgba(0,0,0,0.5);
-	color: white;
-	border-radius: 15px;
-	top: 30px;
-	right: 15px;
-	display: none;
+  
+.quick_reply_btn.toast {
+	background-color: #F1C232;
 }
-.action_menu ul{
-	list-style: none;
-	padding: 0;
+  
+.quick_reply_btn:last-child {
+	margin-right: 0;
+}
+
+body.dark-mode,
+html.dark-mode {
+	height: 100%;
 	margin: 0;
+	background: rgb(44, 47, 59);
+	background: -webkit-linear-gradient(to right, rgb(40, 59, 34), rgb(54, 60, 70), rgb(32, 32, 43));
+	background: linear-gradient(to right, rgb(38, 51, 61), rgb(50, 55, 65), rgb(33, 33, 78));
 }
-.action_menu ul li{
-	width: 100%;
-	padding: 10px 15px;
-	margin-bottom: 5px;
-}
-.action_menu ul li i{
-	padding-right: 10px;
-}
-.action_menu ul li:hover{
-	cursor: pointer;
-	background-color: rgba(0,0,0,0.2);
-}
-@media(max-width: 576px){
-	.contacts_card{
-	margin-bottom: 15px !important;
-}
+
+/* Light Mode */
+body.light-mode,
+html.light-mode {
+	background: rgb(108, 115, 143);
+	background: -webkit-linear-gradient(to right, rgb(94, 139, 80), rgb(117, 130, 152), rgb(92, 92, 124));
+	background: linear-gradient(to right, rgb(64, 86, 103), rgb(88, 96, 113),rgb(53, 53, 127));
 }

@@ -18,6 +18,8 @@ python3 --version
 pip --version
 ```
 
+Get a OpenAi API key. Create a .env file in the root of the project, using `echo "OPENAI_API_KEY=<openaikey>" > .env`.
+
 ## Installing Flask
 
 In your terminal run the requirements.txt file using this pip

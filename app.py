@@ -10,9 +10,13 @@ def index():
 
 @app.route("/get", methods=["GET", "POST"])
 def chat():
-    input = request.form["msg"] 
-    # return get_Chat_response(input)
-    return gpt.get_gpt_answer(input)
+    input = request.form["msg"]
 
+    result = gpt.get_gpt_answer(input)
+    print(result)
+    quick_replies = ["Hello World", "!Goodbye"]
+
+    return {"result": result, "quick_replies": quick_replies}
+    
 if __name__ == '__main__':
     app.run()
