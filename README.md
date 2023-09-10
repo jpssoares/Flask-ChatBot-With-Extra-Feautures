@@ -2,7 +2,13 @@
 ## Introduction
 This project is based on the code from [BinaryHood](https://github.com/binary-hood/ChatBot-Starter). I have added the option for the chatbot to send a quick reply button, which the user can click instead of typing a response.
 
-![Chatbot Screenshot](image.png)
+## Aditional feautres
+### Light/Dark mode
+<img width="1627" alt="Screenshot 2023-09-10 at 16 23 51" src="https://github.com/jpssoares/Flask-ChatBot-With-Extra-Feautures/assets/57997233/168e457d-490d-4180-8508-2b962d44ef9e">
+<img width="1598" alt="Screenshot 2023-09-10 at 16 23 38" src="https://github.com/jpssoares/Flask-ChatBot-With-Extra-Feautures/assets/57997233/2b693f4a-6202-4b85-af5f-05063173b58d">
+
+### Quick replies
+![Quick Replies Screenshot](image.png)
 
 ## Installation & Setup
 
